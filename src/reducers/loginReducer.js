@@ -2,7 +2,6 @@ import * as ActionTypes from "../constants";
 
 const initialState = {
   loading: false,
-  errorMessage: "",
 };
 
 const loginReducer = (state = initialState, action) => {
