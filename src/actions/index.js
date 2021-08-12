@@ -10,6 +10,12 @@ export const resetAuth = (res) => ({
   payload: res,
 });
 
+export const getAuth = (username, password) => ({
+  type: ActionTypes.GET_AUTH,
+  username,
+  password,
+});
+
 export const loadingStart = () => ({
   type: ActionTypes.LOADING_START,
 });
