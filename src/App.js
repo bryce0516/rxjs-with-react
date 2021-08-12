@@ -7,6 +7,7 @@ import Headers from "./components/Headers";
 import Loading from "./components/Loading";
 import ErrorMessage from "./components/errorMessage";
 import Login from "./components/Login";
+import Logout from "./components/Logout";
 function App(props) {
   const { loginState, messageState, authState, actions } = props;
   console.log(props);
@@ -15,6 +16,7 @@ function App(props) {
       <Headers />
       <Login auth={authState.auth} actions={actions} />
       <Loading loading={loginState.loading} />
+      <Logout auth={authState.auth} actions={actions} />
       <ErrorMessage errorMessage={messageState.errorMessage} />
       <p className="App-intro">
         To get started, edit <code>src/Appjs</code> and save to reload
