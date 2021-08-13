@@ -9,6 +9,7 @@ import ErrorMessage from "./components/errorMessage";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Names from "./components/Names";
+import Count from "./components/Count";
 function App(props) {
   const { loginState, messageState, authState, actions } = props;
   console.log(props);
@@ -20,6 +21,7 @@ function App(props) {
       <Logout auth={authState.auth} actions={actions} />
       <ErrorMessage errorMessage={messageState.errorMessage} />
       <Names />
+      <Count />
       <p className="App-intro">
         To get started, edit <code>src/Appjs</code> and save to reload
       </p>
