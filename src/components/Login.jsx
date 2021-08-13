@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { of } from "rxjs";
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
