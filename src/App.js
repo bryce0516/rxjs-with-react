@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { bindActionCreators } from "redux";
@@ -10,8 +11,10 @@ import Login from "./components/Login";
 import Logout from "./components/Logout";
 import Names from "./components/Names";
 import Count from "./components/Count";
+import NewCounter from "./components/NewCounter";
 function App(props) {
   const { loginState, messageState, authState, actions } = props;
+  const [state, setState] = useState(false);
   console.log(props);
   return (
     <div className="App">
@@ -20,7 +23,9 @@ function App(props) {
       <Loading loading={loginState.loading} />
       <Logout auth={authState.auth} actions={actions} />
       <ErrorMessage errorMessage={messageState.errorMessage} /> */}
-      <Names />
+      <button onClick={() => setState(true)}>화면전환</button>
+      {state ? <Names /> : <NewCounter />}
+
       {/* <Count /> */}
       <p className="App-intro">
         To get started, edit <code>src/Appjs</code> and save to reload
