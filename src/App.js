@@ -15,13 +15,13 @@ function App(props) {
   console.log(props);
   return (
     <div className="App">
-      <Headers />
+      {/* <Headers />
       <Login auth={authState.auth} actions={actions} />
       <Loading loading={loginState.loading} />
       <Logout auth={authState.auth} actions={actions} />
-      <ErrorMessage errorMessage={messageState.errorMessage} />
+      <ErrorMessage errorMessage={messageState.errorMessage} /> */}
       <Names />
-      <Count />
+      {/* <Count /> */}
       <p className="App-intro">
         To get started, edit <code>src/Appjs</code> and save to reload
       </p>
